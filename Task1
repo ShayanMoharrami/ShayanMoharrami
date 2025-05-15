@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP_1
+{
+    internal class Program
+    {
+        public class Benz
+        {
+            
+            public bool StartEngine { get; private set; }  
+            public bool StartELectronicServices {  get; private set; }
+            public bool StartLightSystem {  get; private set; }
+
+            public bool Start(bool StartEngine, bool StartELectronicServices, bool StartLightSystem)
+            {
+                if (StartEngine && StartELectronicServices && StartLightSystem)
+                { return true; }
+                else 
+                { return false; }
+                 
+            }
+            
+            
+        }
+        static void Main(string[] args)
+        {
+            var MyCar = new Benz();
+            MyCar.Start(); //erorr expected
+
+
+        }
+    }
+}
